@@ -32,3 +32,82 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.expenseBox {
+  width: 135px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+  align-items: flex-start;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  height: 60px;
+}
+.expenseBox span {
+  font-weight: bold;
+}
+
+.btn {
+  outline: none;
+  padding: 5px 10px;
+  background-color: #ede9fe;
+  color: #6d28d9;
+  border-radius: 5px;
+  border: 1px solid #6d28d9;
+}
+
+.primary {
+  color: #fff;
+  background-color: #6d28d9;
+  border: none;
+  padding: 8px 10px;
+}
+
+.cancel {
+  background-color: #fff;
+  color: #DC2626;
+  border: 1px solid #DC2626;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  min-height: 170px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+input {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  outline: none;
+  border-radius: 5px;
+}
+
+input[type="radio"] {
+  margin-left: 10px;
+}
+
+.radioBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+}
+
+.radioBox label {
+  margin-left: 3px;
+  font-size: 14px;
+}
+
+.transaction {
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin-top: 15px;
+  font-weight: bold;
+display: flex;
+justify-content: space-between;
+border-right: 4px solid green;
+}
