@@ -1,9 +1,14 @@
 import React from 'react'
 
-const TransActionComponent = ({Transaction}) => {
+const TransActionComponent = ({transaction}) => {
   return (
-    <div>Transaction</div>
+   <section>
+ {transaction.map((t)=> {
+  return <div key={t.id}>{t.desc}</div>
+ })}
+   </section>
   )
 }
 
 export default TransActionComponent
+
