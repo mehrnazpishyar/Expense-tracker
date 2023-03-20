@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-const TransactionForm = () => {
+const TransactionForm = ({addTransaction}) => {
   const [formValues, setFormValues] = useState({
-    type: "Expense",
+    type: "expense",
     amount: 0,
     desc: "",
   });
@@ -11,13 +11,19 @@ const TransactionForm = () => {
     setFormValues({...formValues, [e.target.name]:e.target.value})
   }
 
+  const submitHandler = (e) => {
+    e.preventDefault();
+    addTransaction(formValues)
+  }
+
   return (
-    <form>
-      <input type="text" name="desc" onChange={changeHandler} />
-      <input type="number" name="amount" onChange={changeHandler} />
+    <form onSubmit={submitHandler}>
+      <input type="text" name="desc" onChange={changeHandler} value={formValues.desc}/>
+      <input type="number" name="amount" onChange={changeHandler}  value={formValues.amount}/>
       <div>
         <input
           type="radio"
+          checked={formValues.type === "expense"}
           value="expense"
           name="type"
           onChange={changeHandler}
@@ -25,13 +31,14 @@ const TransactionForm = () => {
         <label>Expense</label>
         <input
           type="radio"
+          checked={formValues.type === "income"}
           value="income"
           name="type"
           onChange={changeHandler}
         />
         <label>Income</label>
       </div>
-      <button>Add transaction</button>
+      <button type="submit">Add transaction</button>
     </form>
   );
 };
