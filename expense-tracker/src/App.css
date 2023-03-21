@@ -10,6 +10,9 @@
   font-family: Montserrat;
 }
 
+.App h2{
+  margin-bottom: 30px;
+}
 .topSection {
   display: flex;
   justify-content: space-between;
@@ -110,4 +113,14 @@ input[type="radio"] {
 display: flex;
 justify-content: space-between;
 border-right: 4px solid green;
+}
+
+input.search {
+  display: block;
+  border-radius: 5px;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  background-color: #efefef;
+  width: 100%;
+  margin: 20px 0;
 }
